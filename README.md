@@ -1,6 +1,12 @@
 # UDP_test
 UDP_test for VLP-16 PS: no message description
-written by liwei  2017.07.24 in Hangzhou
+written by liwei in Hangzhou
+// UDP_test.cpp : Defines the entry point for the console application.
+//
+ /* Item:UDP_Velodyne test
+    Author: liwei33
+    Date: 2017.07.21
+    Version 1.0          */
 
 following this web:
 http://blog.csdn.net/qingzai_/article/details/50834146
@@ -28,3 +34,27 @@ Tip4:
   
 
 not ending...
+-------------------------------------------------------------------------------------------------------------------------
+2017.07.24
+#Addition#
+
+printf("length,%d\n", nRet);
+
+printf("1208: %x\n", unsigned char(pszRecv[1208]));
+
+printf("Factory Bytes: %x%x\n", unsigned char(pszRecv[1204]), unsigned char( pszRecv[1205]));
+
+printf("Time stamp: %x;%x;%x;%x\n", unsigned char(pszRecv[1200]), unsigned char(pszRecv[1201]), unsigned char(pszRecv[1202]), unsigned char(pszRecv[1203]));
+
+printf("First Flag: %x%x\n", unsigned char( pszRecv[0]), unsigned char(pszRecv[1]));
+printf("Second Flag: %x%x\n", unsigned char( pszRecv[100]), unsigned char( pszRecv[101]));
+
+printf("\n");
+
+###这只是循环接收30次
+可加入 esc 判定接收结束  ###
+
+ 
+
+
+
